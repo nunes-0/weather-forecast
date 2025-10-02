@@ -153,10 +153,17 @@
 .weather-box {
   animation: fadeUp 0.8s ease forwards;
 }
- @media screen and (max-width:1000px){
-  div#conteiner {
-    width: 90%;
-    max-width: 500px;
-    margin: 20px;
+@media screen and (max-width: 768px) {
+  #conteiner {
+    width: 95%;
+    max-width: 100%; /* deixa ocupar toda largura */
+    margin: 0 auto; /* centraliza no meio */
+  }
+}
+
+@media screen and (max-width: 480px) {
+  #conteiner {
+    width: 100%;
+    margin: 0; /* aproveita cada pixel */
   }
 }
