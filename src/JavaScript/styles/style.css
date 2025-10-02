@@ -167,10 +167,11 @@
     overflow: hidden; /* impede elementos de sair */
   }
 } #other_infos {
-  display: grid;
-  grid-template-columns: repeat(2, 1fr); /* duas colunas iguais */
-  gap: 10px;
-  width: 100%;
+   display: flex;
+  flex-wrap: wrap; /* faz os elementos quebrarem linha */
+  justify-content: space-between; /* distribui melhor os itens */
+  gap: 10px; /* espaço entre eles */
+  width: 100%; /* ocupa só o espaço do container */
   box-sizing: border-box;
 
 }
