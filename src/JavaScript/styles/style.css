@@ -153,3 +153,8 @@
 .weather-box {
   animation: fadeUp 0.8s ease forwards;
 }
+ @media screen and (max-width) {
+  div#conteiner {
+    max-width: 80%;
+  }
+}
