@@ -1,71 +1,76 @@
-
-   /* Poppins font   */
+/* Poppins font   */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-
 * {
-    margin: 0px;
-    padding: 0px;
-    font-family: 'Poppins' , sans-serif;
-    box-sizing: border-box ;
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif;
+    box-sizing: border-box;
 }
-   body {
+
+body {
     display: flex;
     align-items: center;
     justify-content: center;
     min-height: 100vh;
     background: linear-gradient(#3b82f6, #4a7dff);
-    
+}
 
-   }  div#conteiner {
-     background-color: #f0f8ff;
-     border-radius: 20px;
-     padding: 25px ;
-     box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
-     margin: 15px;
-    border: 1px solid #e5e5e5;  
+div#conteiner {
+    background-color: #f0f8ff;
+    border-radius: 20px;
+    padding: 25px;
+    box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.1);
+    margin: 15px;
+    border: 1px solid #e5e5e5;
+}
 
-   } form#search {
+form#search {
     display: flex;
     align-items: center;
     gap: 5px;
     border: 1px solid #bdbdbd;
     border-radius: 10px;
     padding: 4px 12px;
-    max-width: 500px;   /* limite da largura da barra */
-    width: 95%;        /* ocupa 100% até o limite */
+    max-width: 500px;
+    width: 95%;
+}
 
-    
-    } input {
+input {
     border: none;
     background-color: transparent;
     font-size: 17px;
-    flex: 1;            /* input cresce para ocupar o espaço     restante */
-    min-width: 0;       /* evita esticar além do necessário */
+    flex: 1;
+    min-width: 0;
+}
 
-   } input:focus-visible {   /* tira a bordar criada dentro do input     */
-  outline: none;
+input:focus-visible {
+    outline: none;
+}
 
-   } button#pesquisar {
+button#pesquisar {
     background-color: transparent;
     border: none;
     cursor: pointer;
+}
 
-   } div#weather {
-     display: none;
-     margin-top: 20px;
-    
-   }#weather #title {
+div#weather {
+    display: none;
+    margin-top: 20px;
+}
+
+#weather #title {
     text-align: center;
     margin-bottom: 5px;
     font-weight: 600;
     color: #372f3f;
+}
 
-   }#weather.solid {
+#weather.solid {
     display: block;
+}
 
-   }
-   div#infos{
+div#infos {
     display: flex;
     padding: 25px;
     background: linear-gradient(90deg, #5a7cdc, #606dde);
@@ -75,32 +80,38 @@
     color: #f0f8ff;
     gap: 30px;
     align-items: center;
+}
 
-   } div#temp_img{
-     filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.877));  /* adiciona sombra na imagem    */
+div#temp_img {
+    filter: drop-shadow(2px 2px 2px rgba(0, 0, 0, 0.877));
+}
 
-   }  
-     
-     img#img {
-      width: 150px;
-     }
+img#img {
+    width: 150px;
+}
 
-    p#temp_value{
-      font-weight: bold;
-      font-size: 50px;
-      line-height: 55px; /*Diminui espaço entre a informações   */
+p#temp_value {
+    font-weight: bold;
+    font-size: 50px;
+    line-height: 55px;
+}
 
-    }p#temp_descrition {
-      font-weight: 500;
-      text-transform: capitalize;
+p#temp_descrition {
+    font-weight: 500;
+    text-transform: capitalize;
+}
 
-    }div#other_infos {
-      margin-top: 30px;
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      gap: 12px;
+/* Corrigido: versão única e responsiva */
+div#other_infos {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 12px;
+    width: 100%;
+    box-sizing: border-box;
+}
 
-     }  div#other_infos .info {
+div#other_infos .info {
     display: flex;
     align-items: center;
     justify-content: start;
@@ -109,69 +120,88 @@
     box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);
     background-color: #fff;
     gap: 10px;
-
-} div#other_infos .info h2{
-  font-size: 20px;
-  font-weight: 600;
-
-} div#other_infos .info span {
-  text-align: center;
-  font-size: 29px;
-  width: 30%;
-
-} span#max {
-  color: #7f1d1d;
-
-} span#min {
-  color: #0284c7;
-
-}span#humid {
-  color: #0ea5e9;
-
-} span#vento {
-  color: #7c3aed;
-} div#alert {
-  padding-top: 5px;
-
-}div#alert solid {
-  display: none;
+    flex: 1;
+    min-width: 120px;
 }
 
-
-   @keyframes fadeUp {
-  0% {
-    opacity: 0;
-    transform: translateY(20px);
-  }
-  100% {
-    opacity: 1;
-    transform: translateY(0);
-  }
+div#other_infos .info h2 {
+    font-size: 20px;
+    font-weight: 600;
 }
 
+div#other_infos .info span {
+    text-align: center;
+    font-size: 29px;
+    width: 30%;
+}
+
+span#max {
+    color: #7f1d1d;
+}
+
+span#min {
+    color: #0284c7;
+}
+
+span#humid {
+    color: #0ea5e9;
+}
+
+span#vento {
+    color: #7c3aed;
+}
+
+div#alert {
+    padding-top: 5px;
+}
+
+div#alert solid {
+    display: none;
+}
+
+/* animação */
+@keyframes fadeUp {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
 
 .weather-box {
-  animation: fadeUp 0.8s ease forwards;
+    animation: fadeUp 0.8s ease forwards;
 }
-@media screen and (max-width: 768px) {
-  #conteiner {
-    width: 95%;
-    max-width: 100%; /* deixa ocupar toda largura */
-    margin: 0 auto , 15px; /* centraliza no meio */
-    overflow: hidden; 
-  }
-}@media screen and (max-width: 480px) {
-  #conteiner {
-    width: 100%;
-    margin: 0, 15px; /* aproveita cada pixel */
-    overflow: hidden; /* impede elementos de sair */
-  }
-} #other_infos {
-   display: flex;
-  flex-wrap: wrap; /* faz os elementos quebrarem linha */
-  justify-content: space-between; /* distribui melhor os itens */
-  gap: 10px; /* espaço entre eles */
-  width: 100%; /* ocupa só o espaço do container */
-  box-sizing: border-box;
 
+/* Responsividade */
+@media screen and (max-width: 768px) {
+    #conteiner {
+        width: 95%;
+        max-width: 100%;
+        margin: 0 auto 15px; /* corrigido */
+        overflow: hidden;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    #conteiner {
+        width: 100%;
+        margin: 0 10px; /* corrigido */
+        overflow: hidden;
+    }
+
+    #other_infos {
+        grid-template-columns: 1fr; /* empilha em 1 coluna */
+    }
+
+    #other_infos .info h2 {
+        font-size: 16px;
+    }
+
+    #other_infos .info span {
+        font-size: 22px;
+        width: auto;
+    }
 }
